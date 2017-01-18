@@ -14,7 +14,7 @@ xmlhttp.onreadystatechange = function ()
 }
 xmlhttp.send("usename="+yourname+"&pwd="+yourpwd);
 
-function check() {
+/*function check() {
     var useName = document.querySelector('#username');
     if (userName.trim（） === ""||userName == null) {
         document.querySelector('#rig-nc').style.color = "red";
@@ -36,4 +36,4 @@ function check() {
             }
         })
     }
-}
+}*/
