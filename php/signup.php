@@ -5,13 +5,13 @@ $password = $_POST['pwd'];
 
 if(!empty($_POST['username']) && !empty($_POST['pwd']))
 {
-    $username = addslashes($_POST['pwd']);
+    $username = addslashes($_POST['username']);
     $salt = "xiaojidunmogu";
     $password = md5(md5($_POST['pwd']).$salt);
     try 
     {
         $config = require_once 'config.php';
-        $pdo = new PDO($config['dsn'], $config['user'], $config['password']);
+        $pdo = new PDO('mysql:host=localhost;dbname=bium','root','');
         // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $res = $pdo->prepare("select * from tencent where username=:username");
         $res->bindparam(":username",$username);
