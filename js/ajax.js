@@ -12,7 +12,7 @@ function ajax(opts) {
     for(var key in opts) {
         defaults[key] = opts[key];
     };
-    if (typeof defaults,data === 'object') {
+    if (typeof defaults.data === 'object') {
         var str = '';
         for(var key in defaults.data) {
             str += key + '=' + defaults.data[key] + '&'
@@ -25,12 +25,12 @@ function ajax(opts) {
         defaults.url += '?' + defaults.data + defaults.cache;
     };
     var oXhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-    oXhr.open(defaults.method,defaults.url,defaults.asycn);
+    oXhr.open(defaults.method, defaults.url, defaults.asycn);
     if (defaults.method === 'GET') {
         oXhr.send(null);
     }
     else {
-        oXhr.setReruestHeader("Content-type",defaults.contentType);
+        oXhr.setRequestHeader("Content-type",defaults.contentType);
         oXhr.send(defaults.data);
     }
     oXhr.onreadystatechange = function () {
