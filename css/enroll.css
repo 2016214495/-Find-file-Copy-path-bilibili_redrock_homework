@@ -161,7 +161,8 @@ html,body,ul,li{
     border: 1px;
     font-size: 15px;
     float: right;
-    margin-right: 177px;
+    margin-right: 160px;
+    line-height: 40px;
 }
 #enr #srk .cli{
     width: 418px;
