@@ -95,4 +95,13 @@ function check() {
             }
         }
     }
+    var code = document.querySelector("#code").value;
+    ajax({
+        method:'POST',
+        url:'../php/signup.php',
+        data:{
+            code:'code',
+        },
+        success:function(cod) {}
+    })
 }
