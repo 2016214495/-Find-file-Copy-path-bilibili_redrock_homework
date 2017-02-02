@@ -1,39 +1,36 @@
 <?php
-$username = $_POST['username'];
-$password = $_POST['pwd'];
+// session_start();
+echo 'asdasd';
+$username = $_POST['yourname'];
+$password = $_POST['yourpwd'];
+$email = $_POST['postbox'];
+$code = $_POST['code'];
 
+$illegalchar = '~!@#$%^&*()_+{}|:"<>?`-=[]\;\',./';
 
-if(!empty($_POST['username']) && !empty($_POST['pwd']))
-{
-    $username = addslashes($_POST['username']);
-    $salt = "xiaojidunmogu";
-    $password = md5(md5($_POST['pwd']).$salt);
+    $username = addslashes($_POST['yourname']);
+    $salt = "tianwanggaidihu";
+    $password = md5(md5($_POST['yourpwd']).$salt);
     try 
     {
         $config = require_once 'config.php';
-        $pdo = new PDO('mysql:host=localhost;dbname=bium','root','');
+        $pdo = new PDO($config['host'],$config['user'],$config['pass']);
         // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $res = $pdo->prepare("select * from tencent where username=:username");
-        $res->bindparam(":username",$username);
-        $res->execute();
-        // $res = $pdo->query("select * from tencent where username='{$username}'");
-        $data = $res->fetch(PDO::FETCH_ASSOC);
-        // foreach($date as $war)
-        // {
-        //     echo $war;
-        // }
-
+        $result = $pdo->prepare("SELECT * FROM bilibili_user WHERE username=:username");
+        $result->bindparam(":username",$username);
+        $result->execute();
+        $data = $result->fetch(PDO::FETCH_ASSOC);
             if(!empty($data))
             {
-                echo 0;
+                echo 'already exists';
             }
             else
             {
-                $sql ='INSERT INTO tencent (username,password) VALUES("'.$username.'","'.$password.'")';
+                $sql ='INSERT INTO bilibili_user (username,pwd,email) VALUES("'.$username.'","'.$password.'","'.$email.'")';
                 $res2 = $pdo->exec($sql);
                 if($res2 == 1)
                 {
-                    echo 1;
+                    echo 'sucess';
                 }
                 // else
                 // {
@@ -41,16 +38,11 @@ if(!empty($_POST['username']) && !empty($_POST['pwd']))
                 // }
             }
         
-    // }
-    // catch (PDOException $e) 
-    // {
-    //     echo "数据库错误：{$e->getMessage()}";
-    // }
-}
-else
-{
-    echo 2;   //"表单未填完整"
-}
+    }
+    catch (PDOException $e) 
+    {
+        echo "数据库错误：".$e->getMessage();
+    }
 
 
 ?>
