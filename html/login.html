@@ -2,8 +2,58 @@
 <html>
 <head>
     <title>哔哩哔哩视频网</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
 </head>
 <body>
-    
+    <div id="top">
+        <ul id="first" class="title">
+            <li>
+                <i class="iconfont">&#xe60c;</i>
+                <a href="#">主站</a>
+            </li>
+            <li><a href="#">画友</a></li>
+            <li><a href="#">游戏</a></li>
+            <li><a href="#">直播</a></li>
+            <li><a href="#">周边</a></li>
+            <li><a href="#">拜年祭</a></li>
+        </ul>
+        <ul id="third">
+            <li><a href="#">投稿</a></li>
+        </ul>
+        <ul id="second">
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+        </ul>
+        <form action="enroll.php" method="post">
+            <input type="text" name="search" class="bor" placeholder="&nbsp;&nbsp;搜索">
+            <i class="iconfont" id="icon">&#xe608;</i>
+        </form>
+    </div> 
+    <div id="pict">
+        <img src="../image/02.png">
+    </div>
+    <div id="enr">
+        <div class="tiao"></div>
+        <div class="tiao"></div>
+        <div id="enro">注册</div>
+        <div id="lefewm">
+            <img src="../image/03.png" id="ewm">
+            <img src="../image/04.png" id="dibu">
+            <div id="tit">扫描二维码登录</div>
+            <div id="titl">请使用bilibili客户端</div>
+        </div>
+        <div id="shutiao"></div>
+        <form id="log">
+            <input type="username" name="" placeholder="&nbsp;用户名" class="inp" id="yourname">
+            <div class="tishi" id="log_username_ts"></div>
+            <input type="password" name="" placeholder="&nbsp;密码" class="inp" id="yourpwd">
+            <div class="tishi" id="log_pwd_ts"></div>
+            <input type="code" name="" placeholder="&nbsp;验证码" class="inpu">
+            <div class="tishi"></div>
+            <input type="button" name="login" value="登录" id="log_login" class="log_loen">
+            <a href="../html/enroll.html"><input type="button" name="enroll" value="注册" id="log_enroll" class="log_loen"></a>
+        </form>
+    </div>
 </body>
 </html>
