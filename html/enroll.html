@@ -7,59 +7,50 @@
 </head>
 <body>
     <div id="top">
-        <ul id="first" class="title">
-            <li>
-                <i class="iconfont">&#xe60c;</i>
-                <a href="#">主站</a>
-            </li>
-            <li><a href="#">画友</a></li>
-            <li><a href="#">游戏</a></li>
-            <li><a href="#">直播</a></li>
-            <li><a href="#">周边</a></li>
-            <li><a href="#">拜年祭</a></li>
-        </ul>
-        <ul id="third">
-            <li><a href="#">投稿</a></li>
-        </ul>
-        <ul id="second">
-            <li><a href="#">登录</a></li>
-            <li><a href="#">注册</a></li>
-        </ul>
-        <form action="enroll.php" method="post">
-            <input type="text" name="search" class="bor" placeholder="&nbsp;&nbsp;搜索">
-            <i class="iconfont" id="icon">&#xe608;</i>
-        </form>
+        <div id="top_header">
+            <ul id="first" class="title">
+                <li id="top_li_first" class="top_li">
+                    <i class="iconfont">&#xe60c;</i>
+                    <a href="#" class="li_a">主站</a>
+                </li>
+                <li id="top_li_second" class="top_li"><a href="#" class="li_a">画友</a></li>
+                <li id="top_li_third" class="top_li"><a href="#" class="li_a">游戏</a></li>
+                <li id="top_li_four" class="top_li"><a href="#" class="li_a">直播</a></li>
+                <li id="top_li_five" class="top_li"><a href="#" class="li_a">周边</a></li>
+                <li id="top_li_six" class="top_li"><a href="#" class="li_a">拜年祭</a></li>
+            </ul>
+            <ul id="second">
+                <li class="top_second_li"><a href="#" class="second_a">登录</a></li>
+                <li class="top_second_li"><a href="#" class="second_a">注册</a></li>
+            </ul>
+            <ul id="third">
+                <li class="top_third"><a href="#" class="third_a">投稿</a></li>
+            </ul>
+        </div>
     </div>
-    <div id="pict">
-        <img src="../image/02.png">
+    <div id="top_image">
+        <img src="../image/02.png" id="top_image_img">
     </div>
-    <div id="enr">
-        <div class="tiao"></div>
-        <div class="tiao"></div>
-        <div id="enro">注册</div>
-        <div id="srk">
-            <form action="enroll.php" method="post">
+    <div id="header_body">
+        <div id="header_body_enroll">注册</div>
+    </div>
+    <div id="body">
+        <form action="enroll.php" method="post" id="body_form">
             <input type="text" name="昵称" class="kuang" placeholder="&nbsp;&nbsp;昵称(例：哔哩哔哩)" id="yourname">
-            <div class="rig" id="rig-nc"></div>
-            <div class="tishi"></div>
+            <div class="tishi" id="rig-nc"></div>
             <input type="password" name="password" class="kuang" placeholder="&nbsp;&nbsp;密码（6-20个字符组成，区分大小写）" id="yourpwd">
-            <div class="rig" id="rig-mm"></div>
-            <div class="tishi"></div>
+            <div class="tishi" id="rig-mm"></div>
             <input type="password" name="password" class="kuang" placeholder="&nbsp;&nbsp;确认密码" id="tpwd">
-            <div class="rig" id="rig-qrmm"></div>
-            <div class="tishi"></div>
+            <div class="tishi" id="rig-qrmm"></div>
             <input type="text" name="邮箱" class="kuang" placeholder="&nbsp;&nbsp;邮箱（例：123@qq.com）" id="postbox">
-            <div class="rig" id="rig-yx"></div>
-            <div class="tishi"></div>
+            <div class="tishi" id="rig-yx"></div>
             <input type="text" name="验证码" class="kuang" placeholder="&nbsp;&nbsp;请输入验证码" id="code">
             <img src="../php/verfication_code.php">
-            <div class="rig" id="rig-yzm"></div>
-            <div class="tishi">
+            <div class="tishi" id="rig-yzm">
                 <input type="checkbox" name="">我已同意《哔哩哔哩弹幕网使用协议》和《哔哩哔哩弹幕网中心账号规范》
             </div>
             <input type="button" name="注册" class="cli" id="myBtn" value="注册">
-            </form>
-        </div>
+        </form>
     </div>
     <script type="text/javascript" src="../js/ajax.js"></script>
     <script type="text/javascript" src="../js/enroll.js"></script>
