@@ -98,6 +98,7 @@ function cod() {
 }
 document.querySelector("#myBtn").addEventListener("click",oncli);
 function oncli() {
+    var $yourname = document.querySelector("#yourname").value;
     var $yourpwd = document.querySelector("#yourpwd").value;
     var $postbox = document.querySelector("#postbox").value;
     var $code = document.querySelector("#code").value;
@@ -105,6 +106,7 @@ function oncli() {
         method:'POST',
         url:'../php/signup.php',
         data:{
+            yourname:$yourname,
             yourpwd:$yourpwd,
             postbox:$postbox,
             code:$code,

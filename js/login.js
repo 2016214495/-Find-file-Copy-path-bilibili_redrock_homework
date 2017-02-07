@@ -13,7 +13,7 @@ function clicker() {
     if ($yourname != "" || $yourpwd != "" || $yourname != null || $yourpwd != null) {
         ajax({
             method: 'POST',
-            url: '../php/username.php',
+            url: '../php/signin.php',
             data: {
                 yourname: $yourname,
                 yourpwd: $yourpwd,
