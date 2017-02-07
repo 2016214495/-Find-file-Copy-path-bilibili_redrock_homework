@@ -23,122 +23,142 @@
   url('../iconfont1/iconfont.svg#iconfont') format('svg');
 }
 html,body,ul,li{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 #top{
     width: 1350px;
     height: 35px;
+    margin: 0 auto;
+    padding: 0;
 }
 #top #first{
-    width: 675px;
-    margin: 15px auto 0;
-    margin-left: 150px;
-}
-#top #first li{
-    display: block;
-    width: 74px;
-    height: 44px;
+    width: 475px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    margin-left: 180px;
     float: left;
 }
-#top #first li a{
+#top #top_header{
+    background-color: #fff;
+    width: 1350px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    opacity: 0.7;
+}
+#top #first .top_li{
+    float: left;
+    display: block;
+    height: 35px;
+    margin-left: 24px;
+}
+#top #first .top_li .li_a{
     text-decoration: none;
     text-align: center;
-    line-height: 25px;
+    line-height: 40px;
+    height: 35px;
     color: #111111;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
 }
 #top #second{
-    margin-right: 0px;
-    padding: 0 14px;
-    float: right;
-    margin-top: 4px;
+    width: 120px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    margin-left: 350px;
 }
-#top #second li{
+#top #second .top_second_li{
+    float: left;
     display: block;
-    width: 58px;
-    height: 44px;
-    float: right;
-    margin-left: 5px;
+    height: 35px;
+    margin-left: 10px;
 }
-#top #second li a{
+#top #second .top_second_li .second_a{
     text-decoration: none;
     text-align: center;
-    line-height: 0px;
+    line-height: 40px;
+    height: 35px;
     color: #111111;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
 }
 #top #third{
-    float: right;
-    margin-right: 145px;
-    background-color: #DB5480;
-    border-radius: 5px;
-    margin-top: 2px;
-}
-#top #third li{
-    display: block;
-    float: right;
-    width: 40px;
-    height: 30px;
-    line-height: 25px;
-}
-#top #third li a{
-    text-decoration: none;
-    text-align: center;
-    color: #111111;
-}
-#top form .bor{
-    float: right;
-    border-radius: 15px;
-    width: 120px;
-    height: 30px;
-    font-size: 15px;
-    border: 1px solid #C0C0C0;
-    margin-top: -2px;
-}
-#top form #icon{
-    float: left;
-    margin-left: 386px;
-    margin-top: -26px;
-}
-#pict{
-    width: 1350px;
-    height: 87px;
-    position: absolute;
+    width: 100px;
+    height: 40px;
     margin: 0;
-}
-#pict img{
+    padding: 0;
     float: left;
-    width: 1350px;
+    margin-left: 25px;
 }
-#enr{
-    width: 1350px;
+#top #third .top_third{
+    float: left;
+    display: block;
+    height: 40px;
+    width: 50px;
+    background-color: #DB5480;
+    border-radius: 8px;
+    text-align: center;
+}
+#top #third .top_third .third_a{
+    text-decoration: none;
+    line-height: 40px;
+    height: 40px;
+    color: #111111;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+#top_image{
     margin: 0 auto;
+    width: 1350px;
+    height: 110px;
+    background-repeat: no-repeat;
+}
+#top_image #top_image_img{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#header_body{
+    margin: 0;
+    padding: 0;
     position: absolute;
-    margin-top: 150px;
+    height: 45px;
+    margin-left: 150px;
+    margin-top: 20px;
 }
-#enr .tiao{
-    width: 440px;
-    height: 2px;
-    float: left;
-    margin-left: 140px;
-    background-color: #C0C0C0;
-    margin-top: 30px;
-}
-#enr #enro{
-    font-size: 45px;
-    float: left;
-    margin-left: 600px;
-    margin-top: -30px;
-    width: 980px;
+
+#header_body #header_body_enroll{
+    width: 80px;
     height: 60px;
+    font-family: "Microsoft YaHei";
+    font-size: 40px;
+    color: #C0C0C0;
+    padding: 0;
+    line-height: 10px;
+    margin-left: 500px;
 }
-#enr #srk{
+#body{
     margin: 0 auto;
+    padding: 0;
 }
-#enr #srk form{
-    margin-top: 100px;
+#body #body_form{
+    margin: 0;
+    padding: 0;
+    width: 550px;
+    position: absolute;
     margin-left: 450px;
+    margin-top: 80px;
 }
-#enr #srk form .kuang{
+#body #body_form #code{
+    width: 200px;
+}
+#body #body_form .kuang{
     width: 418px;
     height: 42px;
     border: 1px solid #C0C0C0;
@@ -146,7 +166,7 @@ html,body,ul,li{
     border-radius: 3px;
     font-size: 20px;
 }
-#enr #srk form .tishi{
+#body #body_form .tishi{
     width: 418px;
     height: 30px;
     margin: 0 auto;
@@ -155,16 +175,7 @@ html,body,ul,li{
     font-size: 12px;
     color: #949494;
 }
-#enr #srk form .rig{
-    width: 300px;
-    height: 42px;
-    border: 1px;
-    font-size: 15px;
-    float: right;
-    margin-right: 160px;
-    line-height: 40px;
-}
-#enr #srk .cli{
+#body #body_form .cli{
     width: 418px;
     height: 42px;
     background-color: #F9F9F9;
