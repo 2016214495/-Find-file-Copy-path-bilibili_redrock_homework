@@ -1,10 +1,14 @@
 <?php
-
+if (!isset($_SESSION)) {
+    session_start();
+}
 $username = $_POST['yourname'];
-$passward = $_POST['yourpwd'];
-$code = $_POST['code'];
+$password = $_POST['yourpwd'];
+$salt = "tianwanggaidihu";
+$password = md5(md5($password).$salt);
+// $code = $_POST['code'];
 
-if($_SESSION['authcode']==$code){
+// if($_SESSION['authcode']==$code){
     try 
     {
         $config = require_once 'config.php';
@@ -13,17 +17,21 @@ if($_SESSION['authcode']==$code){
         $res->bindParam(":email",$username);
         $res->bindParam(":username",$username);
         $res->execute();
-        $date = $res->fetch(PDO::FETCH_ASSOC);
-        if($passward==$data['pwd']){
-            echo "success";
-        }else{
-            echo "fail";
+        $data = $res->fetch(PDO::FETCH_ASSOC);
+        if (empty($data)) {
+            echo "not find";
+        } else {
+            if ($password == $data['pwd']) {
+                echo "success";
+            } else {
+                echo "fail";
+            }
         }
     }
     catch (PDOException $e) 
     {
         echo "数据库错误：".$e->getMessage();
     }
-}else{
-    echo 'mistake code';
-}
+// }else{
+//     echo 'mistake code';
+// }
