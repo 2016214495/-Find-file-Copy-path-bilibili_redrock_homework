@@ -47,6 +47,7 @@ html,body,ul,li{
     text-align: center;
     line-height: 25px;
     color: #111111;
+    font-family: "Microsoft YaHei"
 }
 #top #second{
     margin-right: 0px;
@@ -66,6 +67,7 @@ html,body,ul,li{
     text-align: center;
     line-height: 0px;
     color: #111111;
+    font-family: "Microsoft YaHei"
 }
 #top #third{
     float: right;
@@ -85,6 +87,7 @@ html,body,ul,li{
     text-decoration: none;
     text-align: center;
     color: #111111;
+    font-family: "Microsoft YaHei";
 }
 #top form .bor{
     float: right;
@@ -124,12 +127,13 @@ html,body,ul,li{
     margin-top: 30px;
 }
 #enr #enro{
-    font-size: 45px;
+    font-size: 40px;
     float: left;
     margin-left: 600px;
     margin-top: -30px;
     /*width: 980px;*/
     height: 60px;
+    font-family: "Microsoft YaHei"
 }
 #enr #lefewm{
     width: 500px;
@@ -143,12 +147,14 @@ html,body,ul,li{
 #enr #lefewm #tit{
     margin-top: -150px;
     margin-left: 280px;
-    font-size: 23px;
+    font-size: 20px;
+    font-family: "Microsoft YaHei"
 }
 #enr #lefewm #titl{
     margin-top: 8px;
     margin-left: 270px;
     font-size: 18px;
+    font-family: "Microsoft YaHei"
 }
 #enr #lefewm #dibu{
     margin-left: 120px;
