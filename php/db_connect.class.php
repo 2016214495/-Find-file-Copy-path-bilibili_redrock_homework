@@ -24,12 +24,12 @@ class Db
     public function selectDb($sql, $pdo)
     {
         $res = $pdo->prepare($sql);
-        $res = $pdo->execute();
-        return $res->fetchAll();
+        $res->execute();
+        return $res->fetchAll(\PDO::FETCH_ASSOC);
     }
     public function updateDb($sql, $pdo)
     {
-        ;
+        return $pdo->exec($sql);
     }
     public function insertDb($sql, $pdo)
     {
