@@ -19,6 +19,3 @@ if(!empty($isexists)) {
     echo 'can be used';
     $_SESSION['nameexists'] = false;
 }
-
-
-?>
