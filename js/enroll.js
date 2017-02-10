@@ -1,4 +1,4 @@
-document.querySelector("#yourname").addEventListener("blur",check);
+ document.querySelector("#yourname").addEventListener("blur",check);
 function check() {
     var $yourname = document.querySelector("#yourname").value;
     if ($yourname == "" || $yourname == null) {
@@ -9,10 +9,11 @@ function check() {
         ajax({
             method:'POST',
             url:'../php/username.php',
+            async:true,
             data:{
                 yourname:$yourname
             },
-            success:function(responseText) {
+            success: function (responseText) {
                 if (responseText == "forbid") {
                     document.querySelector("#rig-nc").style.color = "red";
                     document.querySelector("#rig-nc").innerHTML = "用户名含有非法词语";
@@ -21,11 +22,11 @@ function check() {
                     document.querySelector("#rig-nc").style.color = "red";
                     document.querySelector("#rig-nc").innerHTML = "用户名已被使用";
                 }
-                if(responseText == "sucess") {
+                if(responseText == "can be used") {
                     document.querySelector("#rig-nc").style.color = "green";
                     document.querySelector("#rig-nc").innerHTML = "可以使用";
                 }
-            }
+            },
         })
     }
 }
