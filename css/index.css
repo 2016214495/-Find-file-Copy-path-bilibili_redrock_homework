@@ -211,7 +211,7 @@ body{
 #body{
     margin: 0 auto;
     width: 980px;
-    height: 400px;
+    height: 80px;
     /*border: 1px solid black;*/
     position: relative;
     /*margin-left: 200px;*/
@@ -330,8 +330,198 @@ em{
     font-size: 12px;
     color: #111111;
 }
-#body #body_menu ul li:hover ul{
+#body #body_menu #body_navigation .body_navi_first:hover .second_ul{
     display: block;
-    margin-top: 30px;
+    margin-top: -60px;
     margin-left: 15px;
+    z-index: 5;
+}
+#body #body_menu #body_navigation .body_navi_first:hover #second_ul_gc{
+    margin-top: -30px;
+    z-index: 5;
+}
+#body #body_menu #body_navigation .body_navi_first:hover #second_ul_zb{
+    margin-top: -30px;
+    z-index: 5;
+}
+#indexpic{
+    margin: 0 auto;
+}
+#index_container{
+    width: 990px;
+    height: 230px;
+    margin: 0 auto;
+}
+#carousel{
+    width: 440px;
+    height: 221px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 20px;
+}
+#list{
+    width: 3080px;
+    height: 221px;
+    position: absolute;
+    z-index: -1;
+    margin: 0 auto;
+    padding: 0px;
+    list-style: none;
+    left: -440px;
+    z-index: 1;
+/*    animation: myfirst 20s;*/
+}
+/*@-webkit-keyframes myfirst{
+    0% {background: url(../image/08.png);}
+    25% {background: url(../image/11.png);}
+    50% {background: url(../image/12.png);}
+    75% {background: url(../image/13.png);}
+    100% {background: url(../image/14.png);}
+}
+#contain_imgs{
+    padding: 0px;
+    margin: 0 auto;
+    height: 221px;
+    width: 2210px;
+    position: relative;
+
+}*/
+#list img{
+    float: left;
+    height: 221px;
+    width: 440px;
+}
+#buttons{
+    position: absolute;
+    height: 10px;
+    width: 100px;
+    z-index: 2;
+    bottom: 20px;
+    margin-left: 340px;
+}
+#buttons span{
+    cursor: pointer;
+    float: left;
+    border: 1px solid #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 2px;
+}
+#buttons .on{
+    background-color: #00A1D6;
+    border: 2px solid #fff;
+}
+.arrow{
+    cursor: pointer;
+    display: none;
+    text-align: center;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 2;
+    top: 85px;
+    text-decoration: none;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+}
+.arrow:hover{
+    background-color: RGBA(0,0,0,.7);
+}
+#carousel:hover .arrow{
+    display: block;
+}
+#prew{
+    left: 20px;
+}
+#next{
+    right: 0px;
+}
+#ress{
+    width: 550px;
+    height: 230px;
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid black;*/
+    margin-top: -222px;
+    margin-left: 460px;
+}
+.top_ress{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.medal{
+    width: 162px;
+    height: 100px;
+    /*border: 1px solid black;*/
+    float: left;
+    margin: 0;
+    padding: 0;
+    margin-left: 15px;
+    margin-top: 22px;
+    border-radius: 3px;
+}
+.mask{
+    width: 162px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid black;*/
+    background: #111111;
+    opacity: 0.6;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    color: #fff;
+    display: none;
+    border-radius: 3px;
+}
+.name{
+    width: 162px;
+    height: 20px;
+    background: linear-gradient(0deg, black, #C0C0C0);
+    margin-top: 80px;
+    /*background: #111111;
+    border: 1px solid black;*/
+    opacity: 0.6;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    color: #fff;
+    line-height: 20px;
+    display: block;
+}
+.medal:hover .mask{
+    display: block;
+}
+.medal:hover .name{
+    display: none;
+}
+#medal_fir{
+    background: url(../image/19.png);
+    background-size: cover;
+    margin-top: 0px;
+}
+#medal_sec{
+    background: url(../image/20.png);
+    background-size: cover;
+    margin-top: 0px;
+}
+#medal_thi{
+    background: url(../image/21.png);
+    background-size: cover;
+    margin-top: 0px;
+}
+#medal_fou{
+    background: url(../image/22.png);
+    background-size: cover;
+}
+#medal_fiv{
+    background: url(../image/23.png);
+    background-size: cover;
+}
+#medal_six{
+    background: url(../image/24.png);
+    background-size: cover;
 }
