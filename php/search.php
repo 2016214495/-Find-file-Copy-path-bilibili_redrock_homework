@@ -1,25 +1,23 @@
 <?php
-include("db_connect.class.php");
-use Myproject\BasicClass\Db as Dbconn;
-include("user.class.php");
-use Myproject\BasicClass\User as Us;
+spl_autoload_register(function($class_name) {
+    include "class".DIRECTORY_SEPARATOR.$class_name.".class.php";
+});
 
-$user = new Us();
-$db = new Dbconn();
+$user = new User();
+$db = new Db();
 
 $searcharray = explode(' ',$user->search);
 
 $pdo = $db->connectDb();
+$result = Array();
 foreach ($searcharray as $key => $value) {
-    $sql = 'SELECT username, vtime, vname
+    $sql = 'SELECT username, vtime, vname,vimg,video
             FROM bilibili_video,bilibili_user
             WHERE bilibili_user.uid = bilibili_video.uid
              AND vname LIKE \'%'.$value.'%\'
              LIMIT 10';
     $data = $db->selectDb($sql, $pdo);
-    foreach ($data as $key2 => $value2) {
-        echo json_encode($value2);
-    }
+    $result = array_merge_recursive($result, $data);
 }
-
-
+$res = array_unique($result);
+echo json_encode($res);
