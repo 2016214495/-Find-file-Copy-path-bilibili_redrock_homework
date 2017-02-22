@@ -1,5 +1,4 @@
 <?php
-namespace Myproject\BasicClass;
 
 class Db
 {
@@ -33,6 +32,6 @@ class Db
     }
     public function insertDb($sql, $pdo)
     {
-        return $pdo->exec($sql);
+        return $pdo->exec($sql) > 0 ? true : false;
     }
 }

@@ -1,5 +1,4 @@
 <?php 
-namespace Myproject\BasicClass;
 
 class User
 {
@@ -37,4 +36,5 @@ class User
         $this->password = md5(md5($this->password).$salt);
         return $this->password;
     }
+
 }
