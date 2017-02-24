@@ -1,0 +1,215 @@
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:20px;font-style:normal;
+  color: #12A8D9;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../iconfont3/iconfont.eot');
+  src: url('../iconfont3/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../iconfont3/iconfont.woff') format('woff'),
+  url('../iconfont3/iconfont.ttf') format('truetype'),
+  url('../iconfont3/iconfont.svg#iconfont') format('svg');
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+#top{
+    /*background: url(../image/01.jpg);*/
+    height: 35px;
+    width: 1350px;
+    margin: 0 auto;
+    padding: 0;
+    border-bottom: 1px solid #C0C0C0;
+}
+#top #first{
+    width: 475px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    margin-left: 180px;
+    float: left;
+}
+#top #top_header{
+    background-color: #fff;
+    width: 1350px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    opacity: 0.7;
+}
+#top #first .top_li{
+    float: left;
+    display: block;
+    height: 35px;
+    margin-left: 24px;
+}
+#top #first .top_li .li_a{
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    height: 35px;
+    color: #111111;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+#top #second{
+    width: 120px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    margin-left: 350px;
+}
+#top #second .top_second_li{
+    float: left;
+    display: block;
+    height: 35px;
+    margin-left: 10px;
+}
+#top #second .top_second_li .second_a{
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    height: 35px;
+    color: #111111;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+#top #third{
+    width: 100px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    margin-left: 25px;
+}
+#top #third .top_third{
+    float: left;
+    display: block;
+    height: 40px;
+    width: 50px;
+    background-color: #DB5480;
+    border-radius: 8px;
+    text-align: center;
+}
+#top #third .top_third .third_a{
+    text-decoration: none;
+    line-height: 30px;
+    height: 40px;
+    color: #111111;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+.search_b{
+    margin: 0 auto;
+}
+#frame{
+    width: 600px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.bili{
+    background: url(../image/36.png);
+    background-size: 100% 100%;
+    width: 140px;
+    height: 40px;
+    float: left;
+}
+.sea_b_content{
+    float: left;
+    border: 1px solid #ccd0d7;
+    /*border-left: 0;
+    border-right: 0;*/
+    padding: 0 10px;
+    border-radius: 0;
+    box-shadow: none;
+    line-height: 40px;
+    height: 40px;
+    width: 300px;
+    outline: none;
+    margin-left: 10px;
+}
+.sea_b_but{
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: #00a1d6;
+    color: #fff;
+    float: left;
+    border: 1px solid #008cd2;
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+#list{
+    width: 900px;
+    height: 80px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccd0d7;
+    text-align: center;
+}
+.listdiv{
+    height: 80px;
+    width: 100px;
+    float: left;
+    line-height: 100px;
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+    cursor: pointer;
+}
+.sp{
+    color: #99a2aa;
+    font-size: 15px;
+}
+#list_b{
+    width: 900px;
+    height: 120px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-bottom: 1px solid #ccd0d7;
+}
+.list_suggest{
+    width: 900px;
+    height: 40px;
+}
+.listsug{
+    float: left;
+    margin-left: 30px;
+    border-radius: 4px;
+    font-family: "Microsoft YaHei";
+    font-size: 13px;
+    cursor: pointer;
+}
+#topp{
+    margin-left: 0px;
+    background-color: #00a1d6;
+    color: #fff;
+}
+.listsugg{
+    float: left;
+    margin-left: 30px;
+    border-radius: 4px;
+    font-family: "Microsoft YaHei";
+    font-size: 13px;
+    cursor: pointer;
+}
+.listsugge{
+    float: left;
+    margin-left: 30px;
+    border-radius: 4px;
+    font-family: "Microsoft YaHei";
+    font-size: 13px;
+    cursor: pointer;
+}
+#content{
+    width: 900px;
+}
