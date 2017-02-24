@@ -159,6 +159,7 @@ body{
     padding: 0;
     top: 40px;
     display: none;
+    z-index: 5;
 }
 #search_b_type:hover .list{
     display: block;
@@ -174,6 +175,7 @@ body{
     line-height: 40px;
     height: 40px;
     width: 340px;
+    outline: none;
 }
 .sea_b_but{
     line-height: 40px;
