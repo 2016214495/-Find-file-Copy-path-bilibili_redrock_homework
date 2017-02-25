@@ -6,7 +6,7 @@ if (empty($_SESSION['adminName'])) {
     echo "<script>alert('请先登录！');</script>";
     echo "<script>window.location='../admin/login.html'</script>;";
 }
-$vid = $_GET['vid'];
+$mmid = $_GET['mmid'];
 ?>
 
 
@@ -27,10 +27,8 @@ $vid = $_GET['vid'];
         </ul>
     </div>
     <div class="content">
-        <form action="php/edit.php?vid=<?php echo $vid?>&target=video" method="post">
-            修改视频名称：<input type="text" name="vname">
-            <br>
-            修改视频主人：<input type="text" name="uid">
+        <form action="php/edit.php?mmid=<?php echo $mmid?>&target=comment" method="post">
+            修改楼中楼内容：<input type="text" name="comment">
             <input class="button" type="submit" name="submit" value="上传">
         </form>
     </div>

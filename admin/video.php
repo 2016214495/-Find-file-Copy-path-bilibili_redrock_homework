@@ -75,9 +75,9 @@ $rows = $db->selectDb($sql, $pdo);
             <?php endforeach; ?>
             </tbody>
         </table>
-        <?php echo showPage($page, $totalpage);?>
+        <div class="page"><?php echo showPage($page, $totalpage);?></div>
     </div>
 </div>
-<script type="text/javascript" src="js/video.js"></script>
+<script type="text/javascript" src="js/edit.js"></script>
 </body>
 </html>

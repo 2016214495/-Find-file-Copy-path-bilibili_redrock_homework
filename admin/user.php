@@ -53,17 +53,23 @@ $rows = $db->selectDb($sql, $pdo);
             <tbody>
             <?php foreach($rows as $row):?>
                 <tr>
-                    <td><input type="checkbox" id="<?php echo $row['uid']?>"><label id="uid" for="<?php echo $row['uid']?>"><?php echo $row['uid']?></label></td>
+                    <td>
+                        <input type="checkbox" id="<?php echo $row['uid']?>">
+                        <label id="uid" for="<?php echo $row['uid']?>"><?php echo $row['uid']?></label>
+                    </td>
                     <td><?php echo $row['username']?></td>
                     <td><?php echo $row['utime']?></td>
                     <td><?php echo $row['email']?></td>
-                    <td><input type="button" value="修改" class="button" id="<?php echo $row['uid']?>"><input class="button" type="button" value="删除"></td>
+                    <td>
+                        <input type="button" value="修改" class="button" id="<?php echo $row['uid']?>" onclick="edituser(<?php echo $row['uid']?>)">
+                        <input class="button" type="button" value="删除" onclick="deleteuser(<?php echo $row['uid']?>)">
+                    </td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
         </table>
     </div>
 </div>
-<script type="text/javascript" src="js/video.js"></script>
+<script type="text/javascript" src="js/edit.js"></script>
 </body>
 </html>
