@@ -24,3 +24,17 @@ function read() {
     }
 }
 read();
+document.querySelector(".sea_b_but").addEventListener("click",function() {
+    var $keyword = document.querySelector(".sea_b_content").value;
+    if ($keyword != "" || $keyword != null) {
+        ajax({
+            methed:'GET',
+            url:'../php/search.php',
+            async:true,
+            data:{sea_b_content:$keyword},
+            success:function() {
+                window.location.href = "../html/searchresult.html";
+            }
+        })
+    }
+})
