@@ -6,7 +6,7 @@ if (empty($_SESSION['adminName'])) {
     echo "<script>alert('请先登录！');</script>";
     echo "<script>window.location='../admin/login.html'</script>;";
 }
-$vid = $_GET['vid'];
+$uid = $_GET['uid'];
 ?>
 
 
@@ -27,10 +27,10 @@ $vid = $_GET['vid'];
         </ul>
     </div>
     <div class="content">
-        <form action="php/edit.php?vid=<?php echo $vid?>&target=video" method="post">
-            修改视频名称：<input type="text" name="vname">
+        <form action="php/edit.php?uid=<?php echo $uid?>&target=user" method="post">
+            修改用户名：<input type="text" name="username">
             <br>
-            修改视频主人：<input type="text" name="uid">
+            修改邮箱：<input type="text" name="email">
             <input class="button" type="submit" name="submit" value="上传">
         </form>
     </div>

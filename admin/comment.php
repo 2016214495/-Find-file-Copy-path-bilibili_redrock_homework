@@ -11,7 +11,7 @@ spl_autoload_register(function($class_name) {
 });
 $db = new Db();
 $pdo = $db->connectDb();
-$sql = "SELECT bilibili_in_mark.mid, vid, contain, word, btime
+$sql = "SELECT bilibili_in_mark.mid, vid, contain, word, btime, mmid
         FROM bilibili_mark INNER JOIN bilibili_in_mark
         WHERE bilibili_mark.mid=bilibili_in_mark.mid
         LIMIT 10;";
@@ -55,17 +55,23 @@ $rows = $db->selectDb($sql, $pdo);
             <tbody>
             <?php foreach($rows as $row):?>
                 <tr>
-                    <td><input type="checkbox" id="<?php echo $row['vid']?>"><label id="vid" for="<?php echo $row['vid']?>"><?php echo $row['vid']?></label></td>
+                    <td>
+                        <input type="checkbox" id="<?php echo $row['mmid']?>">
+                        <label id="mid" for="<?php echo $row['mmid']?>"><?php echo $row['mmid']?></label>
+                    </td>
                     <td><?php echo $row['contain']?></td>
                     <td><?php echo $row['word']?></td>
                     <td><?php echo $row['btime']?></td>
-                    <td><input type="button" value="修改" class="button" id="<?php echo $row['vid']?>"><input class="button" type="button" value="删除"></td>
+                    <td>
+                        <input type="button" value="修改" class="button" id="<?php echo $row['mmid']?>" onclick="editcomment(<?php echo $row['mmid']?>)">
+                        <input class="button" type="button" value="删除" onclick="deletecomment(<?php echo $row['mmid']?>)">
+                    </td>
                 </tr>
             <?php endforeach; ?>
             </tbody>
         </table>
     </div>
 </div>
-<script type="text/javascript" src="js/video.js"></script>
+<script type="text/javascript" src="js/edit.js"></script>
 </body>
 </html>
