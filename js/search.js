@@ -27,7 +27,7 @@ read();
 document.querySelector(".sea_b_but").addEventListener("click",function() {
     var $keyword = document.querySelector(".sea_b_content").value;
     if ($keyword != "" || $keyword != null) {
-        ajax({
+        /*ajax({
             methed:'GET',
             url:'../php/search.php',
             async:true,
@@ -35,6 +35,7 @@ document.querySelector(".sea_b_but").addEventListener("click",function() {
             success:function() {
                 window.location.href = "../html/searchresult.html";
             }
-        })
+        })*/
+        window.location.href = "../html/searchresult.html?yoursearch=" + "$keywor";
     }
 })
